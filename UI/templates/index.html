@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+    </form>
+    <img src="/media/image/{{img}}" height="200" width="200">
+    <p>
+        {{ pre_pred }}
+    </p>
+</body>
+</html>
